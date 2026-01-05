@@ -1,0 +1,8 @@
+tensorflow
+sounddevice
+numpy
+vosk
+samplerate
+pynput
+Flask
+flask-cors
