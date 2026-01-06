@@ -23,6 +23,7 @@ dist-ssr
 *.sln
 *.sw?
 
-model/*
+models/*
 __pycache__
 venv
+tmp_pip

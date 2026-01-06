@@ -2,6 +2,7 @@ tensorflow
 sounddevice
 numpy
 vosk
+transformers
 samplerate
 pynput
 Flask

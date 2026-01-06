@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "start": "concurrently 'flask --app app run' 'npm run dev'",
+    "start": "source ./venv/bin/activate && concurrently 'flask --app app run' 'npm run dev'",
     "preview": "vite preview"
   },
   "dependencies": {

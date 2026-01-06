@@ -21,7 +21,7 @@ async function fetchDevices() {
 }
 
 export default function App() {
-   const [devices, setDevices] = useState<string[]>([]);
+   const [devices, setDevices] = useState<{index: number, name: string}[]>([]);
    const [deviceIndex, setDeviceIndex] = useState<string>("");
    const [ok, setOk] = useState<boolean>(false);
 
@@ -66,11 +66,13 @@ export default function App() {
          <div className="flex flex-col w-200 gap-5">
             <Button variant="outline" onClick={refreshList}>Refresh device List</Button>
             <ScrollArea className="h-[200px] w-200 rounded-md border p-4">
-               <ul>
-                  {devices.map((device, index) => (
-                     <li key={index}>index: {index}  device:{device}</li>
-                  ))}
-               </ul>
+              <ul>
+                {devices.map((device) => (
+                  <li key={device.index}>
+                    index: {device.index} device: {device.name}
+                  </li>
+                ))}
+              </ul>
             </ScrollArea>
             <Input 
                placeholder="Enter the index of the device you want to use" 
